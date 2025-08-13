@@ -1,0 +1,12 @@
+<div class="min-h-screen grid place-items-center">
+  <div class="p-6 border rounded bg-white shadow w-full max-w-md">
+    <ng-container *ngIf="!error; else errorTpl">
+      <p>Signing you in with Google...</p>
+    </ng-container>
+    <ng-template #errorTpl>
+      <h1 class="text-xl font-semibold mb-2">Sign-in Error</h1>
+      <p class="text-red-600 mb-4">{{ error }}</p>
+      <a routerLink="/signin" class="text-blue-600 underline">Back to Sign In</a>
+    </ng-template>
+  </div>
+</div>
